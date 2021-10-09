@@ -25,9 +25,6 @@ const images = [
 ]
 
 const App = () => {
-  const [targetTimestamp, setTargetTimestamp] = React.useState(
-    new Date().getTime() + 1000 * 60 * 60 * 2 // 2 hours
-  );
 
   const [showClock, setShowClock] = React.useState(false);
   const [showVideo, setShowVideo] = React.useState(false);
@@ -66,7 +63,7 @@ const App = () => {
     return (
       <>
         <Text styles={{ fontSize: '72px', textAlign: 'center' }}>Chưa mở được đâu nhé em chờ đến đúng ngày nhé</Text>
-        <CountDown endTime={targetTimestamp} onCountDownFinished={handleCountdownFinished} isVisible={showClock} />
+        <CountDown endTime={new Date('2021-10-09T17:00:00.000Z')} onCountDownFinished={handleCountdownFinished} isVisible={showClock} />
       </>
     )
   }
