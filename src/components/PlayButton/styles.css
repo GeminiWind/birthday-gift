@@ -1,0 +1,10 @@
+.video {
+  font-size: 80px;
+  color: #333333;
+  opacity: 1;
+  transition: opacity 0.5s ease 0s;
+}
+
+.video.hidden {
+  opacity: 0;
+}
